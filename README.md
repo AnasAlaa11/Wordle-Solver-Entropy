@@ -4,10 +4,8 @@
 ![Concept](https://img.shields.io/badge/Concept-Information_Theory-success.svg)
 ![Algorithm](https://img.shields.io/badge/Algorithm-Entropy_Maximization-orange.svg)
 
-## 📌 About the Project
-This project is an intelligent algorithm designed to solve the popular word-guessing game **[Wordle](https://www.nytimes.com/games/wordle/index.html)** in the absolute minimum number of attempts. 
-
-Instead of relying on random guessing or simple heuristics, this solver employs **Information Theory** and **Shannon Entropy** to mathematically calculate the optimal next guess. By maximizing the Expected Information Gain, the algorithm aggressively eliminates the maximum possible number of remaining words with every single move.
+## 📌 Description
+🧠 An optimal Wordle solver using Information Theory. This Python algorithm calculates Shannon Entropy to find the mathematically best guess, eliminating the most words per turn! 🟩🟨⬛
 
 ---
 
@@ -46,3 +44,42 @@ Ensure you have Python 3 installed on your machine. No external libraries are re
 Clone the repository, navigate to the directory, and run the script:
 ```bash
 python main.py
+```
+
+### 3. Usage Instructions
+
+1. **Select Mode:** The program will ask if you want to see just the absolute *Top 1 guess* or a ranked list of the *Top 15 guesses*.
+
+2. **Make a Guess:** The solver will suggest the best mathematical starting word (e.g., `tares` or `roate`). Enter your chosen word into the actual Wordle game, then type it into the script.
+
+3. **Input Feedback:** Input the color feedback provided by the Wordle game using the following format:
+
+   * `g` = **Green** (Correct letter, correct position)
+   * `y` = **Yellow** (Correct letter, wrong position)
+   * `r` = **Red/Gray** (Letter not in the word)
+   
+   *Example:* If the game gives you Green, Gray, Yellow, Gray, Green, you type: `gryrg`
+
+4. **Repeat:** The script will instantly filter the remaining words, recalculate the entropy, and give you the best next guess. Repeat until you win!
+
+---
+
+## 💻 Example Output
+```text
+Welcome to Wordle Solver!
+Show top (1) guess or (15) guesses? Enter 1 or 15: 1
+
+====== Round 1 ======
+Remaining possible answers: 2315
+
+Information Gain Reporting for best guess (tares):
+prior entropy H(W) = 11.176798 bits
+best-guess expected feedback entropy H(Y) = 6.193952
+expected posterior entropy H(W|Y) = 4.982845
+information gain I(W;Y) = 6.193952
+
+Best guess: tares   entropy = 6.193952
+
+Enter your guess: tares
+Enter feedback (g/y/r): rrrgr
+```
