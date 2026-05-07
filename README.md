@@ -10,7 +10,7 @@
 ---
 
 ## 👥 Contributors
-This project was developed by Computer and Systems Engineering (CSED28++) students at **Alexandria University - Faculty of Engineering**:
+This project was developed by Computer and Systems Engineering Department (CSED28++) students at **Alexandria University - Faculty of Engineering**:
 
 * **Anas Alaa Abdo** (ID: `24010004`) - [GitHub Profile](https://github.com/AnasAlaa11)
 * **Adham Hamdy Mohamed Mohamed** (ID: `24010094`) - [GitHub Profile](https://github.com/AdhamHamdy14)
@@ -18,7 +18,7 @@ This project was developed by Computer and Systems Engineering (CSED28++) studen
 ---
 
 ## 🧠 How it Works (The Math behind the Magic)
-The core engine of this solver relies on computing the **Entropy (H)**. 
+The core engine of this solver relies on computing the **Entropy (H)**.
 For every possible word in the dictionary, the solver simulates all possible feedback patterns (Green, Yellow, Gray/Red). It calculates how the remaining pool of target words will be split for each pattern.
 
 Using the formula for Expected Entropy:
@@ -57,7 +57,7 @@ python main.py
    * `g` = **Green** (Correct letter, correct position)
    * `y` = **Yellow** (Correct letter, wrong position)
    * `r` = **Red/Gray** (Letter not in the word)
-   
+
    *Example:* If the game gives you Green, Gray, Yellow, Gray, Green, you type: `gryrg`
 
 4. **Repeat:** The script will instantly filter the remaining words, recalculate the entropy, and give you the best next guess. Repeat until you win!
