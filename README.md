@@ -10,7 +10,7 @@
 ---
 
 ## 👥 Contributors
-This project was developed by Computer and Systems Engineering Department (CSED28++) students at **Alexandria University - Faculty of Engineering**:
+This project was developed by Computer and Systems Engineering (CSED28++) students at **Alexandria University - Faculty of Engineering**:
 
 * **Anas Alaa Abdo** (ID: `24010004`) - [GitHub Profile](https://github.com/AnasAlaa11)
 * **Adham Hamdy Mohamed Mohamed** (ID: `24010094`) - [GitHub Profile](https://github.com/AdhamHamdy14)
